@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="top-buttons">
+        <button routerLink="/article-editor" class="btn btn-info btn-fill">New article</button>
+      </div>
+      <lbd-article-list [title]="'List of articles'" [subtitle]="'Here is a subtitle for this list'" [articles]="articles">
+      </lbd-article-list>
+      <div class="article-preview" [hidden]="!loading">
+        Loading articles...
+      </div>
+
+      <div class="article-preview" [hidden]="loading || articles.length">
+        No articles are here... yet.
+      </div>
+
+      <nav [hidden]="loading || totalPages <= 1">
+        <ul class="pagination">
+
+          <li class="page-item" [ngClass]="{'active': pageNumber === currentPage}" *ngFor="let pageNumber of totalPages" (click)="setPageTo(pageNumber)">
+
+            <a class="page-link" href="#">{{ pageNumber }}</a>
+
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

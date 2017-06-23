@@ -1,0 +1,42 @@
+<div class="card" [@cardarticleeditor]>
+  <div class="header">
+    <h4 class="title">Edit Article</h4>
+  </div>
+  <div class="content">
+
+    <!--<list-errors [errors]="errors"></list-errors>-->
+
+    <form [formGroup]="articleForm">
+      <fieldset [disabled]="isSubmitting">
+
+        <fieldset class="form-group">
+          <input class="form-control form-control-lg" formControlName="title" type="text" placeholder="Article Title" />
+        </fieldset>
+
+        <fieldset class="form-group">
+          <input class="form-control" formControlName="description" type="text" placeholder="What's this article about?" />
+        </fieldset>
+
+        <fieldset class="form-group">
+          <textarea class="form-control" formControlName="body" rows="8" placeholder="Write your article (in markdown)">
+              </textarea>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <input class="form-control" type="text" placeholder="Enter tags" [formControl]="tagField" (keyup.enter)="addTag()" />
+
+          <!--<div class="tag-list">
+            <span *ngFor="let tag of article.tagList" class="tag-default tag-pill">
+                  <i class="ion-close-round" (click)="removeTag(tag)"></i>
+                  {{ tag }}
+                </span>
+          </div>-->
+        </fieldset>
+        <button class="btn btn-info btn-fill" type="button" (click)="submitForm()">
+            Publish Article
+        </button>
+      </fieldset>
+    </form>
+
+  </div>
+</div>

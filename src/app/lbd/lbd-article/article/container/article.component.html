@@ -1,0 +1,14 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="top-buttons" [hidden]="!canModify">
+        <button [routerLink]="['/article-editor', article.slug]" class="btn btn-default">Edit</button>
+        <button class="btn btn-default" (click)="deleteArticle()">Delete</button>
+      </div>
+      <lbd-article
+        [article]="article">
+      </lbd-article>
+    </div>
+  </div>
+</div>

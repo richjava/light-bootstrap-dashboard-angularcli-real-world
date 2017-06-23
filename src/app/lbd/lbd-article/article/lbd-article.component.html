@@ -1,0 +1,42 @@
+<div class="card" [@cardarticle]>
+  <div class="content">
+    <section class="banner-section">
+    </section>
+    <div class="col-lg-12 col-md-12 col-sm-12 post-title-block">
+
+      <h1 class="text-center">{{ article.title }}</h1>
+      <ul class="list-inline text-center">
+        <li>{{ article.author.username }} |</li>
+        <li>{{ article.createdAt | date: 'longDate' }}</li>
+      </ul>
+    </div>
+    <div>
+      <p>{{ article.body }}</p>
+      <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis
+        mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+      <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      </blockquote>
+      <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus
+        auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+        Donec ullamcorper nulla non metus auctor fringilla.</p>
+      <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis
+        mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+      <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. nascetur ridiculus mus. Donec
+          ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+          eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+      </blockquote>
+
+      <div class="image-block">
+        <img src="https://static.pexels.com/photos/268455/pexels-photo-268455.jpeg" class="img-responsive">
+      </div>
+
+      <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis
+        mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+    </div>
+  </div>
+</div>

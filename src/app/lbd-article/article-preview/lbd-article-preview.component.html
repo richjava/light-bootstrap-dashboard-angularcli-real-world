@@ -1,0 +1,19 @@
+<div class="[ panel panel-default ] panel-google-plus" [@containerarticles]>
+    <div class="panel-google-plus">
+        <div class="panel-google-plus-tags">
+            <ul>
+                <li>#Millennials</li>
+                <li>#Generation</li>
+            </ul>
+        </div>
+        <div class="panel-heading">
+            <a [routerLink]="['/user', article.author.username]"><img class="[ img-circle pull-left ]" src="{{ article.author.image }}" width="46" height="46" alt="{{ article.author.image }}"/></a>
+            <h3><a [routerLink]="['/user', article.author.username]">{{ article.author.username }}</a></h3>
+            <h5><span>Shared publicly</span> - <span>{{ article.createdAt | date: 'longDate' }}</span> </h5>
+        </div>
+        <div class="panel-body">
+            <h4><a [routerLink]="['/article', article.slug]">{{ article.title }}</a></h4>
+            <p>{{ article.description }}</p>
+            <a [routerLink]="['/article', article.slug]" class="btn btn-default">Read more</a>
+        </div>
+    </div>
